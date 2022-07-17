@@ -72,7 +72,9 @@
                             <constraint firstItem="5Xf-VN-j8k" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r7i-kk-dIt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Nj-Y1-Ljk"/>
+                    <navigationItem key="navigationItem" id="9Nj-Y1-Ljk">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Xa0-E4-gir"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="playerButton" destination="15D-kC-3Ti" id="UOf-Su-nZP"/>
                         <outlet property="refereeButton" destination="3tL-zp-Xl0" id="ret-EI-iAo"/>
@@ -117,7 +119,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LQ3-DA-Yqf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yAx-GW-eKb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="back button 1" backIndicatorTransitionMaskImage="back button 1" id="yAx-GW-eKb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,6 +137,7 @@
         <image name="Host button 2 1" width="245" height="79"/>
         <image name="Referee button2 1" width="245" height="79"/>
         <image name="Typography 1" width="278" height="181"/>
+        <image name="back button 1" width="54" height="31"/>
         <image name="player button 2 1" width="245" height="79"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

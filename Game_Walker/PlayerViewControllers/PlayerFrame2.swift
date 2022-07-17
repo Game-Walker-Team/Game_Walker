@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class PlayerFrame2: BaseViewController {
+class PlayerFrame2: UIViewController {
     
 
     @IBOutlet weak var creatTeamButton: UIButton!
@@ -21,19 +21,19 @@ class PlayerFrame2: BaseViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+       
         
     }
     
     @IBAction func createTeamButtonPressed(_ sender: UIButton) {
         
-        
+        performSegue(withIdentifier: "goToPF3_1VC", sender: self)
         
     }
     
     @IBAction func joinTeamButtonPressed(_ sender: UIButton) {
         
-        
+        performSegue(withIdentifier: "goToPF3_2VC", sender: self)
         
     }
 }

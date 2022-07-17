@@ -20,7 +20,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         K.Database.delegates.append(self)
+        playerButton.imageView?.contentMode = .scaleToFill
     }
+    
     
     @IBAction func hostButtonPressed(_ sender: Any) {
         K.gamecode = String(Int.random(in: 100000 ... 999999))

@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
         </scene>
-        <!--Referee Frame3-->
+        <!--Referee Frame33-->
         <scene sceneID="oTF-TH-7jv">
             <objects>
-                <viewController id="mAO-zd-khf" customClass="RefereeFrame3" sceneMemberID="viewController">
+                <viewController id="mAO-zd-khf" customClass="RefereeFrame3_3" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Uc-OY-TVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +257,12 @@
                             <constraint firstItem="398-qT-RXv" firstAttribute="width" secondItem="nwA-q0-rNI" secondAttribute="width" multiplier="0.9" id="qDu-Y8-dEQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gamelocationLabel" destination="Ske-pT-HiF" id="c3s-Qz-sny"/>
+                        <outlet property="gamenameLabel" destination="JQj-TC-B62" id="e5n-rm-WpE"/>
+                        <outlet property="gamepointsLabel" destination="JLW-Ty-cer" id="Deb-EB-gxf"/>
+                        <outlet property="rulesLabel" destination="AUB-vW-R1Z" id="QGJ-cr-oqW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Vv-5k-MSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +271,7 @@
         <!--Referee Frame21-->
         <scene sceneID="9BG-48-abq">
             <objects>
-                <viewController id="4vK-pl-gaJ" customClass="RefereeFrame2_1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RefereeFrame2_1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4vK-pl-gaJ" customClass="RefereeFrame2_1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Qj-Gn-9Kk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +293,9 @@
                                 <rect key="frame" x="74" y="156.5" width="266" height="321"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="IMG_6244" title=""/>
+                                <connections>
+                                    <action selector="scoreButtonPressed:" destination="4vK-pl-gaJ" eventType="touchUpInside" id="J2c-6K-gp8"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWh-pu-WBu">
                                 <rect key="frame" x="74.5" y="426" width="265" height="144.5"/>
@@ -339,11 +348,17 @@
                                 <rect key="frame" x="106.5" y="644" width="201.5" height="71"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="rule button 1" title=""/>
+                                <connections>
+                                    <action selector="ruleButtonPressed:" destination="4vK-pl-gaJ" eventType="touchUpInside" id="MIi-Ui-zvh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I02-a7-kzt">
                                 <rect key="frame" x="74" y="670.5" width="266" height="245"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="next game 1" title=""/>
+                                <connections>
+                                    <action selector="nextgameButtonPressed:" destination="4vK-pl-gaJ" eventType="touchUpInside" id="4dZ-jh-XVw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZGe-Bo-Qn2"/>
@@ -373,8 +388,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="6ve-Tb-mVa"/>
                     <connections>
-                        <segue destination="mAO-zd-khf" kind="presentation" modalPresentationStyle="fullScreen" id="V4I-n7-so6"/>
-                        <segue destination="EwB-o7-p0J" kind="presentation" modalPresentationStyle="fullScreen" id="8Ie-W6-3NO"/>
+                        <outlet property="nextgameButton" destination="I02-a7-kzt" id="YGU-up-m9C"/>
+                        <outlet property="roundLabel" destination="peX-so-fSX" id="9J0-tM-qID"/>
+                        <outlet property="ruleButton" destination="8j1-5s-Npb" id="wmQ-fX-0BY"/>
+                        <outlet property="scoreButton" destination="iuD-T8-Azg" id="9zg-4r-RTu"/>
+                        <outlet property="teamnameLabel" destination="yBg-IW-7Wg" id="Zwe-gb-Z8X"/>
+                        <outlet property="teamscoreLabel" destination="Sve-SZ-3Go" id="Btj-OK-QCP"/>
+                        <segue destination="mAO-zd-khf" kind="presentation" identifier="goToPVERule" modalPresentationStyle="fullScreen" id="V4I-n7-so6"/>
+                        <segue destination="EwB-o7-p0J" kind="presentation" identifier="goToPVEScore" modalPresentationStyle="fullScreen" id="8Ie-W6-3NO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYo-JZ-ecG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -384,7 +405,7 @@
         <!--Referee Frame22-->
         <scene sceneID="1kz-AZ-Klt">
             <objects>
-                <viewController id="XZy-ih-fQL" customClass="RefereeFrame2_2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RefereeFrame2_2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XZy-ih-fQL" customClass="RefereeFrame2_2" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5mP-v6-EEC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,6 +433,9 @@
                                                 <rect key="frame" x="42.5" y="-52" width="203" height="232"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="IMG_6244" title=""/>
+                                                <connections>
+                                                    <action selector="scoreButton1Pressed:" destination="XZy-ih-fQL" eventType="touchUpInside" id="iJM-8O-BJv"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team 1" translatesAutoresizingMaskIntoConstraints="NO" id="1cD-J8-8vS">
                                                 <rect key="frame" x="108" y="124" width="72" height="72"/>
@@ -463,6 +487,9 @@
                                                 <rect key="frame" x="4.5" y="-62" width="183" height="252"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="IMG_6244" title=""/>
+                                                <connections>
+                                                    <action selector="scoreButton2Pressed:" destination="XZy-ih-fQL" eventType="touchUpInside" id="DQd-WK-hl2"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Team 1" translatesAutoresizingMaskIntoConstraints="NO" id="qX5-jL-vNd">
                                                 <rect key="frame" x="60" y="124" width="72" height="72"/>
@@ -520,11 +547,17 @@
                                 <rect key="frame" x="106" y="644" width="202" height="71"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="rule button 1" title=""/>
+                                <connections>
+                                    <action selector="ruleButtonPressed:" destination="XZy-ih-fQL" eventType="touchUpInside" id="TGm-4e-MqH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4p-hl-PrP">
                                 <rect key="frame" x="107" y="757.5" width="200" height="71"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="next game 1" title=""/>
+                                <connections>
+                                    <action selector="nextGamePressed:" destination="XZy-ih-fQL" eventType="touchUpInside" id="7ee-pn-Zzs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fve-QH-Ubm"/>
@@ -550,8 +583,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="mes-M6-Pir"/>
                     <connections>
-                        <segue destination="mAO-zd-khf" kind="presentation" modalPresentationStyle="fullScreen" id="K4e-Qd-Vjz"/>
-                        <segue destination="zdv-pk-eEo" kind="presentation" modalPresentationStyle="fullScreen" id="EJx-Ly-ODe"/>
+                        <outlet property="nextgameButton" destination="t4p-hl-PrP" id="tTG-ZZ-8Oz"/>
+                        <outlet property="roundLabel" destination="Bj0-cZ-pY8" id="NQm-MU-ZBy"/>
+                        <outlet property="ruleButton" destination="px4-UP-9ha" id="QhZ-rS-ocM"/>
+                        <outlet property="scoreButton1" destination="YTT-PN-yJ2" id="kdJ-wl-AAT"/>
+                        <outlet property="scoreButton2" destination="cRZ-Aj-cGi" id="RZr-J5-S62"/>
+                        <outlet property="scoreLabel1" destination="gys-ky-RTY" id="PHI-6i-8gY"/>
+                        <outlet property="scoreLabel2" destination="MCs-mh-3Dx" id="J6d-E9-PjA"/>
+                        <outlet property="teamnameLabel" destination="Unm-aX-VVb" id="T5o-p3-jf8"/>
+                        <outlet property="teamnameLabel2" destination="fdh-Xz-GNj" id="wqc-5U-X4u"/>
+                        <segue destination="mAO-zd-khf" kind="presentation" identifier="goToPVPRule" modalPresentationStyle="fullScreen" id="K4e-Qd-Vjz"/>
+                        <segue destination="zdv-pk-eEo" kind="presentation" identifier="goToPVPScore" modalPresentationStyle="fullScreen" id="EJx-Ly-ODe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMx-N0-xXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -561,7 +603,7 @@
         <!--Referee Frame31-->
         <scene sceneID="HJQ-uR-tH8">
             <objects>
-                <viewController id="EwB-o7-p0J" customClass="RefereeFrame3_1" sceneMemberID="viewController">
+                <viewController id="EwB-o7-p0J" customClass="RefereeFrame3_1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBF-3L-mrN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,12 +701,18 @@
                                                 <color key="value" systemColor="systemGreenColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="scoreStepperPressed:" destination="EwB-o7-p0J" eventType="valueChanged" id="BX7-J4-IkZ"/>
+                                        </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsU-6d-yxc">
                                         <rect key="frame" x="0.0" y="187.5" width="240" height="62.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="White! confirm button 1"/>
+                                        <connections>
+                                            <action selector="confirmButtonPressed:" destination="EwB-o7-p0J" eventType="touchUpInside" id="QR3-V9-bil"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -710,6 +758,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="koD-sc-VTg"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="zsU-6d-yxc" id="eaJ-7s-elp"/>
+                        <outlet property="nextgameButton" destination="kDf-jD-AQs" id="ysM-5v-faJ"/>
+                        <outlet property="roundLabel" destination="4Sa-QY-zA5" id="B4z-9x-lec"/>
+                        <outlet property="ruleButton" destination="xPE-u2-g4n" id="g9V-kl-Q88"/>
+                        <outlet property="scoreButton" destination="ijh-0w-Mzb" id="mz7-5P-N2W"/>
+                        <outlet property="scoreLabel" destination="zP1-A3-s7B" id="POa-Ia-n56"/>
+                        <outlet property="scoreStepper" destination="dsg-DN-Peu" id="Ggq-Ct-Sry"/>
+                        <outlet property="teamnameLabel" destination="39O-HR-moh" id="qON-mv-65q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sb9-fQ-IRE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -718,7 +776,7 @@
         <!--Referee Frame32-->
         <scene sceneID="nv4-7Y-g5m">
             <objects>
-                <viewController id="zdv-pk-eEo" customClass="RefereeFrame3_2" sceneMemberID="viewController">
+                <viewController id="zdv-pk-eEo" customClass="RefereeFrame3_2" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mRk-9v-mRf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -878,12 +936,18 @@
                                                 <color key="value" systemColor="systemGreenColor"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="scoreStepperPressed:" destination="zdv-pk-eEo" eventType="valueChanged" id="QDW-hg-3FZ"/>
+                                        </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-wc-8Q2">
                                         <rect key="frame" x="0.0" y="187.5" width="263" height="62.5"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="White! confirm button 1"/>
+                                        <connections>
+                                            <action selector="confirmButtonPressed:" destination="zdv-pk-eEo" eventType="touchUpInside" id="acQ-y8-ERM"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -925,6 +989,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i8Z-ru-flF"/>
+                    <connections>
+                        <outlet property="confirmButton" destination="FgC-wc-8Q2" id="3dQ-JP-mup"/>
+                        <outlet property="nextgameButton" destination="kyv-se-34M" id="tVW-ws-n6T"/>
+                        <outlet property="roundLabel" destination="VOU-vN-x1Q" id="6Zs-3a-PUC"/>
+                        <outlet property="ruleButton" destination="I0g-oP-x5d" id="jWv-ll-cUV"/>
+                        <outlet property="scoreButton1" destination="XFX-6p-ohD" id="P2P-ro-RGc"/>
+                        <outlet property="scoreButton2" destination="iP3-JA-JzA" id="qhH-dD-FQA"/>
+                        <outlet property="scoreLabel" destination="lzs-UE-QdB" id="Koe-dZ-7xl"/>
+                        <outlet property="scoreLabel2" destination="G3J-Op-aHQ" id="hdi-Nu-3Sk"/>
+                        <outlet property="scoreStepper" destination="3my-nS-skS" id="MX6-Gn-Bvz"/>
+                        <outlet property="teamnameLabel" destination="vtE-HY-y0U" id="Y4d-IJ-9qW"/>
+                        <outlet property="teamnameLabel2" destination="cWN-rE-n5V" id="nFI-D3-vZc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duz-Uh-DRr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -932,7 +1009,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="K4e-Qd-Vjz"/>
+        <segue reference="V4I-n7-so6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IMG_6244" width="211" height="274"/>

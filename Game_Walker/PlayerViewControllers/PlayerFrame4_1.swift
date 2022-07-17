@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PlayerFrame4_1:BaseViewController {
+class PlayerFrame4_1: UIViewController {
     
     override func viewDidLoad() {
         

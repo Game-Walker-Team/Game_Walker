@@ -29,7 +29,7 @@ class RefereeFrame1: UIViewController {
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         if let gamecode = gamecodeTextField.text, let name = usernameTextField.text {
-            let newReferee = Referee(name: name, gamecode: gamecode, station: Station())
+            let newReferee = Referee(gamecode: gamecode, name: name, station: Station())
             K.Database.setupRequest(gamecode: newReferee.gamecode, player: nil, referee: newReferee, team: nil, station: nil, gameTime: nil, movingTime: nil, rounds: nil, request: .addReferee)
         }
         if pvp {

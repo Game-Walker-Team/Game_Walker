@@ -23,7 +23,8 @@ class HostFrame1 : UIViewController{
 
     @IBAction func test(_ sender: UIButton) {
         
-        K.Database.setupRequest(gamecode: K.gamecode, player: nil, referee: nil, team: nil, station: nil, gameTime: 15, movingTime: 15, rounds: 5, request: .timer)
+        K.Database.setupRequest(gamecode: K.gamecode, player: nil, referee: nil, team: nil, station: nil, gameTime: 15, movingTime: 12, rounds: 5, request: .timer)
+        
     }
     
 

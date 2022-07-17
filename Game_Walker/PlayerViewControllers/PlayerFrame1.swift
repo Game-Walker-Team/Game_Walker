@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PlayerFrame1: BaseViewController {
+class PlayerFrame1: UIViewController {
     
     
     @IBOutlet weak var gamecodeTextField: UITextField!
@@ -20,30 +20,20 @@ class PlayerFrame1: BaseViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        self.hideKeyboardWhenTappedAround()
-        
         // Do any additional setup after loading the view.
         K.Database.delegates.append(self)
-        gamecodeTextField.delegate = self
-        usernameTextField.delegate = self
+        
     }
     
 
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        
-        gamecodeTextField.resignFirstResponder()
-        usernameTextField.resignFirstResponder()
 
-        if let gamecode: String = gamecodeTextField.text, let username: String = usernameTextField.text, !gamecode.isEmpty, !username.isEmpty {
+        if let gamecode: String = gamecodeTextField.text, let username: String = usernameTextField.text {
             K.Database.readHost(gamecode: gamecode, onListenerUpdate: listen(_:))
             let newPlayer = Player(gamecode: gamecode, name: username)
             K.Database.setupRequest(gamecode: newPlayer.gamecode, player: newPlayer, referee: nil, team: nil, station: nil, gameTime: nil, movingTime: nil, rounds: nil, request: .addPlayer)
-
-            performSegue(withIdentifier: "goToPF2VC", sender: self)
-        } else {
-            alert(title: "Woops", message: "Please enter all information to log in")
-        }        
+        }
+        performSegue(withIdentifier: "goToPF2VC", sender: self)
     }
     
     func listen(_ _ : [String : Any]){
@@ -63,18 +53,3 @@ extension PlayerFrame1: DataUpdateListener {
     }
     
 }
-
-// MARK: - UITextFieldDelegate
-extension PlayerFrame1: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == gamecodeTextField {
-            usernameTextField.becomeFirstResponder()
-        } else if textField == usernameTextField {
-            nextButtonPressed(nextButton)
-        }
-        return true
-    }
-    
-}
-

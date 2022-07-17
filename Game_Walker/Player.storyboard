@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -20,20 +20,20 @@
             <objects>
                 <viewController storyboardIdentifier="PlayerFrame1VC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PlayerFrame1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="JjS-oM-0t8">
-                                <rect key="frame" x="53.666666666666657" y="175.00000000000003" width="321" height="398.66666666666674"/>
+                                <rect key="frame" x="52" y="170" width="310.5" height="384.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-Jl-jSM">
-                                        <rect key="frame" x="0.0" y="0.0" width="321" height="199.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="192.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game code?" translatesAutoresizingMaskIntoConstraints="NO" id="fxR-q8-2ia">
-                                                <rect key="frame" x="76.999999999999986" y="39.333333333333343" width="166.66666666666663" height="21.333333333333329"/>
+                                                <rect key="frame" x="74.5" y="38" width="161" height="20.5"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="gamecode" textAlignment="center" minimumFontSize="17" background="text box 1" translatesAutoresizingMaskIntoConstraints="NO" id="b0T-xa-Ha7">
-                                                <rect key="frame" x="34.333333333333343" y="79.666666666666657" width="252.00000000000003" height="99.666666666666657"/>
+                                                <rect key="frame" x="33.5" y="77" width="243.5" height="96"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="27"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -51,13 +51,13 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3f-Nf-STL">
-                                        <rect key="frame" x="0.0" y="202.33333333333331" width="321" height="196.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="195.5" width="310.5" height="189"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user name_ 2" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-3F-1hH">
-                                                <rect key="frame" x="76.999999999999986" y="0.0" width="166.66666666666663" height="98.333333333333329"/>
+                                                <rect key="frame" x="74.5" y="0.0" width="161" height="94.5"/>
                                             </imageView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="username" textAlignment="center" minimumFontSize="17" background="text box 1" translatesAutoresizingMaskIntoConstraints="NO" id="FHB-dB-ukm">
-                                                <rect key="frame" x="34.333333333333343" y="78.666666666666686" width="252.00000000000003" height="98"/>
+                                                <rect key="frame" x="33.5" y="75.5" width="243.5" height="94.5"/>
                                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="27"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -84,7 +84,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwH-xD-iG8">
-                                <rect key="frame" x="111" y="782.33333333333337" width="206" height="73.333333333333371"/>
+                                <rect key="frame" x="107.5" y="757.5" width="199.5" height="71"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="next button 1" title=""/>
                                 <connections>
@@ -121,22 +121,22 @@
             <objects>
                 <viewController id="MIX-tc-IL7" customClass="PlayerFrame2" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ec7-NK-4PD">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-W4-AgV">
-                                <rect key="frame" x="88" y="287" width="252" height="80"/>
+                                <rect key="frame" x="85.5" y="277" width="243.5" height="77.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="create team button 2"/>
+                                <state key="normal" image="create team button 2"/>
                                 <connections>
                                     <action selector="createTeamButtonPressed:" destination="MIX-tc-IL7" eventType="touchUpInside" id="x9A-hO-OBa"/>
                                     <segue destination="JIl-tV-nZg" kind="show" identifier="goToPF3_1VC" id="y3Y-iH-LpS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-Lc-Buy">
-                                <rect key="frame" x="88" y="532.66666666666663" width="252" height="79.666666666666629"/>
+                                <rect key="frame" x="85.5" y="515" width="243.5" height="77.5"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="join team button 1"/>
+                                <state key="normal" image="join team button 1"/>
                                 <connections>
                                     <action selector="joinTeamButtonPressed:" destination="MIX-tc-IL7" eventType="touchUpInside" id="f8q-wC-BvO"/>
                                     <segue destination="QO4-di-gmo" kind="show" identifier="goToPF3_2VC" id="6iJ-Vt-OCN"/>
@@ -171,43 +171,41 @@
             <objects>
                 <viewController id="JIl-tV-nZg" customClass="PlayerFrame3_1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lJk-wI-xTI">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="team name 1" translatesAutoresizingMaskIntoConstraints="NO" id="o71-xb-Yzf">
-                                <rect key="frame" x="131.33333333333331" y="96.666666666666671" width="165.33333333333331" height="35.666666666666671"/>
+                                <rect key="frame" x="127" y="93.5" width="160" height="34.5"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" background="text box 1" translatesAutoresizingMaskIntoConstraints="NO" id="eq1-L3-5lr">
-                                <rect key="frame" x="88" y="143.33333333333334" width="252" height="80"/>
+                                <rect key="frame" x="85.5" y="138.5" width="243.5" height="77"/>
                                 <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="0.0"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose your team icon 1" translatesAutoresizingMaskIntoConstraints="NO" id="ADp-y0-gcK">
-                                <rect key="frame" x="44.333333333333343" y="266.66666666666669" width="339.33333333333326" height="35.333333333333314"/>
+                                <rect key="frame" x="43" y="258" width="328" height="34"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-6V-kyF">
-                                <rect key="frame" x="122.66666666666667" y="772.66666666666663" width="182.66666666666663" height="57.666666666666629"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" backgroundImage="create team button 2"/>
+                                <rect key="frame" x="118.5" y="747.5" width="177" height="55.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="create team button 2"/>
                                 <connections>
                                     <action selector="createTeamButtonPressed:" destination="JIl-tV-nZg" eventType="touchUpInside" id="aj4-nc-kcg"/>
+                                    <segue destination="1Rp-53-rNI" kind="show" identifier="goToTPF4" id="LnA-lU-QcW"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aTU-Td-471">
-                                <rect key="frame" x="64.333333333333343" y="346.66666666666674" width="299.33333333333326" height="360"/>
+                                <rect key="frame" x="90" y="338" width="234" height="343"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="360" id="bCr-ny-fpd"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="7Kk-TS-KKy">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Kk-TS-KKy">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VHU-Jh-cZ0" customClass="IconCollectionViewCell" customModule="Game_Walker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VHU-Jh-cZ0">
+                                        <rect key="frame" x="53" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fBa-7q-F7Q">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -222,7 +220,7 @@
                         <constraints>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.427536" id="0LT-7C-7Jl"/>
                             <constraint firstItem="o71-xb-Yzf" firstAttribute="centerY" secondItem="wCW-Pj-Rj4" secondAttribute="centerY" multiplier="0.25" id="A4w-cf-qU6"/>
-                            <constraint firstItem="aTU-Td-471" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.7" id="F08-YR-dQe"/>
+                            <constraint firstItem="aTU-Td-471" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.565217" id="F08-YR-dQe"/>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="centerY" secondItem="wCW-Pj-Rj4" secondAttribute="centerY" multiplier="1.75" id="FhA-gc-rFK"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="GaV-iA-nR2"/>
                             <constraint firstItem="o71-xb-Yzf" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.0427873" id="Icu-Vr-6hD"/>
@@ -232,6 +230,7 @@
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="centerY" secondItem="wCW-Pj-Rj4" secondAttribute="centerY" multiplier="0.4" id="ShN-ZC-vyo"/>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="UsN-XE-nVK"/>
                             <constraint firstItem="ADp-y0-gcK" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.0427873" id="WE6-RN-wCU"/>
+                            <constraint firstItem="aTU-Td-471" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.430318" id="YXr-0R-yqW"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.588164" id="daf-At-HzH"/>
                             <constraint firstItem="ADp-y0-gcK" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.792271" id="hCO-bV-oLH"/>
                             <constraint firstItem="ADp-y0-gcK" firstAttribute="centerY" secondItem="wCW-Pj-Rj4" secondAttribute="centerY" multiplier="0.621" id="hHK-aM-Ta0"/>
@@ -246,7 +245,6 @@
                         <outlet property="collectionView" destination="aTU-Td-471" id="awW-up-Cfy"/>
                         <outlet property="createTeamButton" destination="Vfe-6V-kyF" id="xbu-7k-Vg7"/>
                         <outlet property="teamNameTextField" destination="eq1-L3-5lr" id="48l-qU-BPW"/>
-                        <segue destination="1Rp-53-rNI" kind="show" identifier="goToTPF4" id="29y-2J-Hks"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfv-BR-9h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -258,19 +256,20 @@
             <objects>
                 <viewController id="QO4-di-gmo" customClass="PlayerFrame3_2" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9br-f4-Lh3">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMD-Kg-HhG">
-                                <rect key="frame" x="122.66666666666667" y="772.66666666666663" width="182.66666666666663" height="57.666666666666629"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="" backgroundImage="join team button 1"/>
+                                <rect key="frame" x="118.5" y="747.5" width="177" height="55.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="join team button 1" title=""/>
                                 <connections>
                                     <action selector="joinTeamButtonPressed:" destination="QO4-di-gmo" eventType="touchUpInside" id="mCO-fh-glg"/>
+                                    <segue destination="1Rp-53-rNI" kind="show" identifier="goToPF44" id="pM3-H8-OPd"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="choose your team 1" translatesAutoresizingMaskIntoConstraints="NO" id="WJX-FA-dl0">
-                                <rect key="frame" x="91" y="85" width="246" height="35.333333333333343"/>
+                                <rect key="frame" x="88" y="82" width="238" height="34.5"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aLB-HE-1os"/>
@@ -289,7 +288,6 @@
                     <navigationItem key="navigationItem" id="oMC-b6-HOG"/>
                     <connections>
                         <outlet property="joinTeamButton" destination="pMD-Kg-HhG" id="wfW-ax-EW7"/>
-                        <segue destination="1Rp-53-rNI" kind="show" identifier="goToPF44" id="M4x-Iq-v4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fzn-AZ-0HH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -321,14 +319,14 @@
             <objects>
                 <viewController id="Zkt-o5-gfj" customClass="PlayerFrame4_1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32a-A9-NYs">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="members 1" translatesAutoresizingMaskIntoConstraints="NO" id="fbZ-Ba-269">
-                                <rect key="frame" x="30.666666666666671" y="92" width="217.33333333333331" height="58.666666666666657"/>
+                                <rect key="frame" x="30" y="89" width="210" height="56.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHS-ku-8NB">
-                                <rect key="frame" x="311.33333333333331" y="115.33333333333331" width="62" height="30"/>
+                                <rect key="frame" x="301" y="111.5" width="60" height="29"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="leave 1"/>
                             </button>
@@ -357,20 +355,12 @@
             <objects>
                 <navigationController id="rMN-4Z-Axc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="team member icon 1" id="vhQ-hw-dRM"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" backIndicatorImage="back button 1" backIndicatorTransitionMaskImage="back button 1" id="Wca-LS-kHq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wca-LS-kHq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="Dosis-Regular" family="Dosis" pointSize="0.0"/>
                         </textAttributes>
-                        <navigationBarAppearance key="compactAppearance">
-                            <barButtonItemAppearance key="backButtonAppearance">
-                                <barButtonItemStateAppearance key="normal"/>
-                                <barButtonItemStateAppearance key="highlighted"/>
-                                <barButtonItemStateAppearance key="disabled"/>
-                                <barButtonItemStateAppearance key="focused"/>
-                            </barButtonItemAppearance>
-                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="Zkt-o5-gfj" kind="relationship" relationship="rootViewController" id="FMM-kd-IdG"/>
@@ -385,21 +375,10 @@
             <objects>
                 <viewController id="dWY-v4-76s" customClass="PlayerFrame4_2" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xr2-qI-PVm">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ranking 1" translatesAutoresizingMaskIntoConstraints="NO" id="BDC-4Y-7gV">
-                                <rect key="frame" x="30" y="92" width="192.66666666666666" height="58.666666666666657"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qT9-g7-uz0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="BDC-4Y-7gV" firstAttribute="centerY" secondItem="qT9-g7-uz0" secondAttribute="centerY" multiplier="0.27" id="8x6-Hb-s0V"/>
-                            <constraint firstItem="BDC-4Y-7gV" firstAttribute="height" secondItem="qT9-g7-uz0" secondAttribute="height" multiplier="0.0745721" id="B9d-c9-cuK"/>
-                            <constraint firstItem="BDC-4Y-7gV" firstAttribute="centerX" secondItem="qT9-g7-uz0" secondAttribute="centerX" multiplier="0.59" id="Zf9-wO-SWd"/>
-                            <constraint firstItem="BDC-4Y-7gV" firstAttribute="width" secondItem="qT9-g7-uz0" secondAttribute="width" multiplier="0.45" id="hiH-ka-e9w"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aTS-cS-zr8"/>
                 </viewController>
@@ -413,7 +392,7 @@
                 <navigationController id="Gq4-bE-vMD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="timer icon 1" id="rtI-ZE-6U2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HWA-4t-dSX">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -429,21 +408,10 @@
             <objects>
                 <viewController id="ynI-iC-04s" customClass="PlayerFrame4_3" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZ6-VQ-e23">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game info 2" translatesAutoresizingMaskIntoConstraints="NO" id="p8f-Sm-GaO">
-                                <rect key="frame" x="30.666666666666657" y="92" width="315" height="58.666666666666657"/>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BjG-Bb-y3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="p8f-Sm-GaO" firstAttribute="centerX" secondItem="BjG-Bb-y3L" secondAttribute="centerX" multiplier="0.88" id="FKr-O5-6kp"/>
-                            <constraint firstItem="p8f-Sm-GaO" firstAttribute="centerY" secondItem="BjG-Bb-y3L" secondAttribute="centerY" multiplier="0.27" id="YcH-FJ-ob4"/>
-                            <constraint firstItem="p8f-Sm-GaO" firstAttribute="width" secondItem="BjG-Bb-y3L" secondAttribute="width" multiplier="0.736" id="bAh-Z4-w2Y"/>
-                            <constraint firstItem="p8f-Sm-GaO" firstAttribute="height" secondItem="BjG-Bb-y3L" secondAttribute="height" multiplier="0.0745721" id="iho-Kl-I5F"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qeT-WX-hQA"/>
                 </viewController>
@@ -457,7 +425,7 @@
                 <navigationController id="6UD-sz-hKM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="score 2" id="erh-i9-YSR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3I4-XA-jeK">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -470,26 +438,23 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="29y-2J-Hks"/>
+        <segue reference="pM3-H8-OPd"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="back button 1" width="54" height="31"/>
-        <image name="choose your team 1" width="237.66667175292969" height="35"/>
+        <image name="choose your team 1" width="238" height="35"/>
         <image name="choose your team icon 1" width="328" height="35"/>
-        <image name="create team button 2" width="243.66667175292969" height="79"/>
+        <image name="create team button 2" width="244" height="79"/>
         <image name="game code?" width="100" height="15"/>
-        <image name="game info 2" width="309.33334350585938" height="50"/>
-        <image name="join team button 1" width="243.66667175292969" height="79"/>
+        <image name="join team button 1" width="244" height="79"/>
         <image name="leave 1" width="60" height="31"/>
         <image name="members 1" width="210" height="61"/>
-        <image name="next button 1" width="175.33332824707031" height="57"/>
-        <image name="ranking 1" width="187" height="61"/>
+        <image name="next button 1" width="175.5" height="57"/>
         <image name="score 2" width="84" height="112"/>
         <image name="team member icon 1" width="84" height="112"/>
         <image name="team name 1" width="160" height="35"/>
-        <image name="text box 1" width="243.66667175292969" height="79"/>
+        <image name="text box 1" width="244" height="79"/>
         <image name="timer icon 1" width="85" height="112"/>
-        <image name="user name_ 2" width="155.66667175292969" height="35"/>
+        <image name="user name_ 2" width="156" height="35"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
