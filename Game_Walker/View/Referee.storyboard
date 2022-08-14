@@ -561,7 +561,7 @@
         <!--Referee Frame31-->
         <scene sceneID="HJQ-uR-tH8">
             <objects>
-                <viewController id="EwB-o7-p0J" customClass="RefereeFrame3_1" sceneMemberID="viewController">
+                <viewController id="EwB-o7-p0J" customClass="RefereeFrame3_1" customModule="Game_Walker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBF-3L-mrN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,7 +932,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="K4e-Qd-Vjz"/>
+        <segue reference="V4I-n7-so6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="IMG_6244" width="211" height="274"/>

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RefereeFrame3_3: UIViewController {
+class RulesViewController: UIViewController {
     
     @IBOutlet weak var gamenameLabel: UITextField!
     
@@ -33,10 +33,10 @@ class RefereeFrame3_3: UIViewController {
 }
 
 //MARK: - UIUpdate
-extension RefereeFrame3_3: DataUpdateListener {
+extension RulesViewController: DataUpdateListener {
     func onDataUpdate(_ host: Host) {
         for referee in host.referees {
-            if referee.name == RefereeFrame1().name {
+            if referee.name == RegisterController().name {
                 station = referee.station
             }
         }

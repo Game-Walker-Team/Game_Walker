@@ -8,28 +8,18 @@
 import Foundation
 import UIKit
 
-class RefereeFrame2_1: UIViewController {
+class PVERefereeController: UIViewController {
     
     @IBOutlet weak var roundLabel: UILabel!
-    
     @IBOutlet weak var scoreButton: UIButton!
-    
     @IBOutlet weak var teamnameLabel: UILabel!
-    
     @IBOutlet weak var teamscoreLabel: UILabel!
-    
     @IBOutlet weak var ruleButton: UIButton!
-    
     @IBOutlet weak var nextgameButton: UIButton!
-    
     var round = 1
-    
     var station : Station = Station()
-    
     var index = 0
-    
     var algorithm : [[String]] = []
-    
     var teams : [Team] = []
     
     override func viewDidLoad() {
@@ -60,10 +50,10 @@ class RefereeFrame2_1: UIViewController {
 }
 
 //MARK: - UIUpdate
-extension RefereeFrame2_1: DataUpdateListener {
+extension PVERefereeController: DataUpdateListener {
     func onDataUpdate(_ host: Host) {
         for referee in host.referees {
-            if referee.name == RefereeFrame1().name {
+            if referee.name == RegisterController().name {
                 station = referee.station
             }
         }

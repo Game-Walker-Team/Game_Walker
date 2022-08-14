@@ -9,23 +9,17 @@ import Foundation
 import UIKit
 import GMStepper
 
-class RefereeFrame3_1: UIViewController {
+class PVEGivePointsController: UIViewController {
     
     @IBOutlet weak var roundLabel: UILabel!
-    
     @IBOutlet weak var scoreButton: UIButton!
-    
     @IBOutlet weak var teamnameLabel: UILabel!
-    
     @IBOutlet weak var scoreLabel: UILabel!
-    
     @IBOutlet weak var ruleButton: UIButton!
-    
     @IBOutlet weak var nextgameButton: UIButton!
-    
     @IBOutlet weak var scoreStepper: GMStepper!
-    
     @IBOutlet weak var confirmButton: UIButton!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

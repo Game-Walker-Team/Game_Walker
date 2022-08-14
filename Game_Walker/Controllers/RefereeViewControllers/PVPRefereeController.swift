@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RefereeFrame2_2: UIViewController {
+class PVPRefereeController: UIViewController {
     @IBOutlet weak var roundLabel: UILabel!
     
     @IBOutlet weak var scoreButton1: UIButton!
@@ -70,10 +70,10 @@ class RefereeFrame2_2: UIViewController {
     }
 }
 //MARK: - UIUpdate
-extension RefereeFrame2_2: DataUpdateListener {
+extension PVPRefereeController: DataUpdateListener {
     func onDataUpdate(_ host: Host) {
         for referee in host.referees {
-            if referee.name == RefereeFrame1().name {
+            if referee.name == RegisterController().name {
                 station = referee.station
             }
         }
