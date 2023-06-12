@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>595048883588-dp8fv7hr7d0oje24ospmolg38jhl2dgk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.595048883588-dp8fv7hr7d0oje24ospmolg38jhl2dgk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCjrxJ_5uiHwqnVl_fG5nDUlvE-Z1krTeg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>595048883588</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.joyful.Game-Walker</string>
+	<key>PROJECT_ID</key>
+	<string>gamewalker-e1ce9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gamewalker-e1ce9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:595048883588:ios:ad222311d0f5f6851629d1</string>
+</dict>
+</plist>
