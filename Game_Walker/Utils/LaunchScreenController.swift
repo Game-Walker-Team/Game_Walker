@@ -19,7 +19,7 @@ class LaunchScreenController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.9) {
                 self.addRectangles()
         }
-        prepareSound()
+        //prepareSound()
         soundPlayer?.play()
     }
     
