@@ -108,15 +108,13 @@ class TeamIconCollectionViewCell: UICollectionViewCell {
         teamNameLabel.text = teamName
         teamNumLabel.text = teamNum
     }
-    
-    func showBorder() {
-        containerView.layer.borderColor = UIColor(red: 0.208, green: 0.671, blue: 0.953, alpha: 1).cgColor
-        containerView.layer.borderWidth = 3
-        containerView.layer.cornerRadius = containerView.frame.width / 2
-    }
-    
-    func hideBorder() {
-        containerView.layer.borderWidth = 0
-    }
-    
+//    func showBorder() {
+//        containerView.layer.borderColor = UIColor(red: 0.208, green: 0.671, blue: 0.953, alpha: 1).cgColor
+//        containerView.layer.borderWidth = 3
+//        containerView.layer.cornerRadius = containerView.frame.width / 2
+//    }
+//    
+//    func hideBorder() {
+//        containerView.layer.borderWidth = 0
+//    }
 }
