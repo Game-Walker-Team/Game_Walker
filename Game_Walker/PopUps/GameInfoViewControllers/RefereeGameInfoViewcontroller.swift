@@ -256,7 +256,7 @@ class RefereeGameInfoViewcontroller: UIViewController {
             gameNameLabel1.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             
             gameLocationLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.4492307692),
-            gameLocationLabel.topAnchor.constraint(equalTo: gameNameLabel1.bottomAnchor, constant: 12.0),
+            gameLocationLabel.topAnchor.constraint(equalTo: gameNameLabel1.bottomAnchor, constant: 15.0),
             gameLocationLabel.heightAnchor.constraint(equalTo: gameLocationLabel.widthAnchor, multiplier: 0.1712328767),
             gameLocationLabel.leadingAnchor.constraint(equalTo: gameNameLabel1.leadingAnchor),
             
@@ -266,7 +266,7 @@ class RefereeGameInfoViewcontroller: UIViewController {
             gameLocationLabel1.leadingAnchor.constraint(equalTo: gameNameLabel1.leadingAnchor),
             
             gamePointsLabel.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.3938461538),
-            gamePointsLabel.topAnchor.constraint(equalTo: gameLocationLabel1.bottomAnchor, constant: 12.0),
+            gamePointsLabel.topAnchor.constraint(equalTo: gameLocationLabel1.bottomAnchor, constant: 15.0),
             gamePointsLabel.heightAnchor.constraint(equalTo: gamePointsLabel.widthAnchor, multiplier: 0.1953125),
             gamePointsLabel.leadingAnchor.constraint(equalTo: gameNameLabel1.leadingAnchor),
             
@@ -282,7 +282,7 @@ class RefereeGameInfoViewcontroller: UIViewController {
             
             gameRuleTextView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.82),
             gameRuleTextView.topAnchor.constraint(equalTo: gameRuleLabel.bottomAnchor),
-            gameRuleTextView.heightAnchor.constraint(equalTo: gameRuleTextView.widthAnchor, multiplier: 0.32),
+            gameRuleTextView.bottomAnchor.constraint(equalTo: buttonView.topAnchor, constant: -15),
             gameRuleTextView.leadingAnchor.constraint(equalTo: gameNameLabel1.leadingAnchor),
             
             buttonView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 0.3876923077),

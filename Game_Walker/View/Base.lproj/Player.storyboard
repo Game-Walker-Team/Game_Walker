@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -233,7 +233,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOP-IQ-mef" customClass="LocalizedFontLabel" customModule="Game_Walker" customModuleProvider="target">
-                                <rect key="frame" x="117.66666666666667" y="116.99999999999999" width="192.66666666666663" height="43.333333333333329"/>
+                                <rect key="frame" x="86.666666666666671" y="116.99999999999999" width="254.66666666666663" height="43.333333333333329"/>
                                 <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -244,7 +244,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcH-Ph-z0G" customClass="LocalizedFontLabel" customModule="Game_Walker" customModuleProvider="target">
-                                <rect key="frame" x="117.66666666666667" y="271.66666666666669" width="192.66666666666663" height="43.333333333333314"/>
+                                <rect key="frame" x="86.666666666666671" y="271.66666666666669" width="254.66666666666663" height="43.333333333333314"/>
                                 <fontDescription key="fontDescription" name="GemunuLibre-SemiBold" family="Gemunu Libre" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -300,26 +300,26 @@
                             <constraint firstItem="lOP-IQ-mef" firstAttribute="centerY" secondItem="wCW-Pj-Rj4" secondAttribute="centerY" multiplier="0.32" id="6pQ-dC-0Xe"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="78j-PS-xu0"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.595" id="9p5-hg-lQY"/>
-                            <constraint firstItem="PcH-Ph-z0G" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.45" id="9sh-ht-zZD"/>
+                            <constraint firstItem="PcH-Ph-z0G" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.595" id="9sh-ht-zZD"/>
                             <constraint firstItem="hLd-VR-hmI" firstAttribute="top" secondItem="PcH-Ph-z0G" secondAttribute="bottom" id="A6F-Ey-Hnf"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.065" id="BqX-xH-Nck"/>
                             <constraint firstItem="hLd-VR-hmI" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.595" id="ChI-TN-gs8"/>
                             <constraint firstItem="jdC-AO-KSw" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.76" id="GzT-Xa-VRU"/>
+                            <constraint firstItem="aTU-Td-471" firstAttribute="width" secondItem="jdC-AO-KSw" secondAttribute="width" id="Mm2-Cu-w6G"/>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.07" id="RwY-9z-6Kz"/>
                             <constraint firstItem="hLd-VR-hmI" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.065" id="UYo-F9-20p"/>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="UsN-XE-nVK"/>
                             <constraint firstItem="aTU-Td-471" firstAttribute="top" secondItem="jdC-AO-KSw" secondAttribute="bottom" constant="20" id="fVB-Cr-JkL"/>
                             <constraint firstItem="jdC-AO-KSw" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="fhQ-Ds-8Ml"/>
                             <constraint firstItem="lOP-IQ-mef" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="gSG-je-dJF"/>
+                            <constraint firstItem="aTU-Td-471" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="grP-d4-CmF"/>
                             <constraint firstItem="hLd-VR-hmI" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="h6W-1i-qf0"/>
-                            <constraint firstItem="aTU-Td-471" firstAttribute="trailing" secondItem="jdC-AO-KSw" secondAttribute="trailing" id="mZ1-bX-kX6"/>
                             <constraint firstItem="PcH-Ph-z0G" firstAttribute="centerX" secondItem="wCW-Pj-Rj4" secondAttribute="centerX" id="n9b-1t-rgc"/>
                             <constraint firstItem="Vfe-6V-kyF" firstAttribute="top" secondItem="aTU-Td-471" secondAttribute="bottom" constant="30" id="ofw-Qm-bfj"/>
                             <constraint firstItem="lOP-IQ-mef" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.05" id="pS8-xg-iMg"/>
                             <constraint firstItem="jdC-AO-KSw" firstAttribute="top" secondItem="hLd-VR-hmI" secondAttribute="bottom" constant="45" id="qlw-ey-alR"/>
                             <constraint firstItem="PcH-Ph-z0G" firstAttribute="height" secondItem="wCW-Pj-Rj4" secondAttribute="height" multiplier="0.05" id="uGg-r1-kvx"/>
-                            <constraint firstItem="aTU-Td-471" firstAttribute="leading" secondItem="jdC-AO-KSw" secondAttribute="leading" id="xqX-UP-J8f"/>
-                            <constraint firstItem="lOP-IQ-mef" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.45" id="zEJ-1x-sM1"/>
+                            <constraint firstItem="lOP-IQ-mef" firstAttribute="width" secondItem="wCW-Pj-Rj4" secondAttribute="width" multiplier="0.595" id="zEJ-1x-sM1"/>
                             <constraint firstItem="eq1-L3-5lr" firstAttribute="top" secondItem="lOP-IQ-mef" secondAttribute="bottom" id="zGl-zx-DZ7"/>
                         </constraints>
                     </view>
