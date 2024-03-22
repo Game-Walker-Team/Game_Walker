@@ -1548,3 +1548,67 @@ class StationTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+//
+//func pvpDefault(_ rounds: Int, _ stations: Int, _ teams: Int) -> [[Int]]? {
+//    if(rounds != stations || rounds*2 != teams){
+//        return nil
+//    }
+//    
+//    //MARK: - Standard Setup - works for odd number rounds cases
+//    var result = Array(repeating: Array(repeating: 0, count: teams), count: rounds)
+//    
+//    for num in 1...teams {
+//        result[0][num-1] = num
+//    }
+//    
+//    //odd number diagonal
+//    for row in 1..<rounds {
+//        for col in stride(from: 0, to: teams, by: 2){
+//            result[row][col] = result[row-1][(col-2+teams)%teams]
+//        }
+//    }
+//    
+//    //even number diagonal
+//    for row in 1..<rounds {
+//        for col in stride(from: 1, to: teams, by: 2){
+//            result[row][col] = result[row-1][(col+2)%teams]
+//        }
+//    }
+//    
+//    //MARK: - Even rounds & stations
+//    if teams%4 == 0 && teams >= 8 {
+//        var half = rounds/2
+//        if half%2 == 0 {
+//            for loop in 0..<half {
+//                for num in 0..<(teams/4) {
+//                    if loop%2 == 0{
+//                        var temp = result[half+loop][num*4]
+//                        result[half+loop][num*4] = result[half+loop][3+num*4]
+//                        result[half+loop][3+num*4] = temp
+//                    } else {
+//                        var temp = result[half+loop][1+num*4]
+//                        result[half+loop][1+num*4] = result[half+loop][2+num*4]
+//                        result[half+loop][2+num*4] = temp
+//                    }
+//                }
+//            }
+//        } else {
+//            for loop in 0..<half-1 {
+//                for num in 0..<(teams/4) {
+//                    if loop%2 == 0{
+//                        var temp = result[half+loop][num*4]
+//                        result[half+loop][num*4] = result[half+loop][3+num*4]
+//                        result[half+loop][3+num*4] = temp
+//                    } else {
+//                        var temp = result[half+loop][1+num*4]
+//                        result[half+loop][1+num*4] = result[half+loop][2+num*4]
+//                        result[half+loop][2+num*4] = temp
+//                    }
+//                }
+//            }
+//        }
+//    }
+//
+//    return result
+//}
