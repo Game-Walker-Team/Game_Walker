@@ -1145,7 +1145,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96F9ZYF44K;
+				DEVELOPMENT_TEAM = 8WZS33QTKD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Game_Walker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Game Walker";
@@ -1162,7 +1162,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyful.GameWalkerJoyful;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyful.GameWalkerJoyful2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1183,7 +1183,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 96F9ZYF44K;
+				DEVELOPMENT_TEAM = 8WZS33QTKD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Game_Walker/Supporting Files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Game Walker";
@@ -1200,7 +1200,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyful.GameWalkerJoyful;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joyful.GameWalkerJoyful2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

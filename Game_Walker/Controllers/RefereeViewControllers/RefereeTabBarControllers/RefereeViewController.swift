@@ -366,6 +366,16 @@ class RefereePVEController: UIViewController {
         return view
     }()
     
+    private lazy var explanationLabel: UILabel = {
+        var label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = NSLocalizedString("Remember to choose 'WIN' or 'LOSE' before the round ends!", comment: "")
+        label.textColor = .black
+        label.textAlignment = .center
+        label.font = UIFont(name: "Dosis-Bold", size: fontSize(size: 13))
+        return label
+    }()
+    
     func modifyViewsPVE() {
         borderView.removeFromSuperview()
         self.view.addSubview(teamNumLabel)
@@ -379,6 +389,7 @@ class RefereePVEController: UIViewController {
         self.view.addSubview(scoreLabel)
         self.view.addSubview(winButton)
         self.view.addSubview(loseButton)
+        self.view.addSubview(explanationLabel)
     }
     
     func combineSubviewsPVE() {
@@ -389,6 +400,7 @@ class RefereePVEController: UIViewController {
         self.view.addSubview(scoreLabel)
         self.view.addSubview(winButton)
         self.view.addSubview(loseButton)
+        self.view.addSubview(explanationLabel)
     }
     
     func addConstraintsPVE() {
@@ -397,6 +409,7 @@ class RefereePVEController: UIViewController {
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         winButton.translatesAutoresizingMaskIntoConstraints = false
         loseButton.translatesAutoresizingMaskIntoConstraints = false
+        explanationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             
             roundLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -422,7 +435,12 @@ class RefereePVEController: UIViewController {
             loseButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.176),
             loseButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.032),
             loseButton.leadingAnchor.constraint(equalTo: winButton.trailingAnchor, constant: 5),
-            loseButton.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 5)
+            loseButton.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 5),
+            
+            explanationLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            explanationLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025),
+            explanationLabel.topAnchor.constraint(equalTo: winButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
+            explanationLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
     }
     
@@ -446,7 +464,7 @@ class RefereePVEController: UIViewController {
             teamNameLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.492),
             teamNameLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.12),
         
-            scoreLabel.topAnchor.constraint(equalTo: teamNameLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.05),
+            scoreLabel.topAnchor.constraint(equalTo: teamNameLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.02),
         ])
     }
     
@@ -458,6 +476,7 @@ class RefereePVEController: UIViewController {
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         winButton.translatesAutoresizingMaskIntoConstraints = false
         loseButton.translatesAutoresizingMaskIntoConstraints = false
+        explanationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             
             roundLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -483,7 +502,7 @@ class RefereePVEController: UIViewController {
             scoreLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.370),
             scoreLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.0604),
             scoreLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            scoreLabel.topAnchor.constraint(equalTo: teamNameLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.05),
+            scoreLabel.topAnchor.constraint(equalTo: teamNameLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.02),
             
             winButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.176),
             winButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.032),
@@ -493,7 +512,12 @@ class RefereePVEController: UIViewController {
             loseButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.176),
             loseButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.032),
             loseButton.leadingAnchor.constraint(equalTo: winButton.trailingAnchor, constant: 5),
-            loseButton.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 5)
+            loseButton.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 5),
+            
+            explanationLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            explanationLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025),
+            explanationLabel.topAnchor.constraint(equalTo: winButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
+            explanationLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
     }
     //MARK: - UI Elements - PVP
@@ -705,6 +729,7 @@ class RefereePVEController: UIViewController {
         self.view.addSubview(rightWinButton)
         self.view.addSubview(rightLoseButton)
         self.view.addSubview(rightScoreLabel)
+        self.view.addSubview(explanationLabel)
     }
     
     func combineSubviewsPVP() {
@@ -721,6 +746,7 @@ class RefereePVEController: UIViewController {
         self.view.addSubview(rightTeamNumLabel)
         self.view.addSubview(rightIconButton)
         self.view.addSubview(rightTeamNameLabel)
+        self.view.addSubview(explanationLabel)
     }
     
     func addConstraintsPVP() {
@@ -733,6 +759,7 @@ class RefereePVEController: UIViewController {
         rightWinButton.translatesAutoresizingMaskIntoConstraints = false
         rightLoseButton.translatesAutoresizingMaskIntoConstraints = false
         rightScoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        explanationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             
             roundLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -778,7 +805,12 @@ class RefereePVEController: UIViewController {
             rightLoseButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.156),
             rightLoseButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.032),
             rightLoseButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -UIScreen.main.bounds.size.width * 0.13),
-            rightLoseButton.topAnchor.constraint(equalTo: rightScoreLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.0001)
+            rightLoseButton.topAnchor.constraint(equalTo: rightScoreLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.0001),
+            
+            explanationLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            explanationLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025),
+            explanationLabel.topAnchor.constraint(equalTo: leftWinButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
+            explanationLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
     }
     
@@ -839,6 +871,7 @@ class RefereePVEController: UIViewController {
         rightScoreLabel.translatesAutoresizingMaskIntoConstraints = false
         rightWinButton.translatesAutoresizingMaskIntoConstraints = false
         rightLoseButton.translatesAutoresizingMaskIntoConstraints = false
+        explanationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             
             roundLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
@@ -904,7 +937,12 @@ class RefereePVEController: UIViewController {
             rightLoseButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.156),
             rightLoseButton.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.032),
             rightLoseButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -UIScreen.main.bounds.size.width * 0.13),
-            rightLoseButton.topAnchor.constraint(equalTo: rightScoreLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.0001)
+            rightLoseButton.topAnchor.constraint(equalTo: rightScoreLabel.bottomAnchor, constant: UIScreen.main.bounds.size.height * 0.0001),
+            
+            explanationLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.8),
+            explanationLabel.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.025),
+            explanationLabel.topAnchor.constraint(equalTo: leftWinButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
+            explanationLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
         ])
     }
     
@@ -1337,7 +1375,14 @@ extension RefereePVEController {
     
     @objc override func infoAction() {
         if !teamOrderSet {
-            alert(title: NSLocalizedString("The Host is completing the settings", comment: ""), message: NSLocalizedString("Please try again when it is ready.", comment: ""))
+            if pvp {
+                leftIconButton.frame = CGRect(x: UIScreen.main.bounds.size.width * 0.105, y: UIScreen.main.bounds.size.height * 0.315, width: UIScreen.main.bounds.size.width * 0.38, height: UIScreen.main.bounds.size.width * 0.38)
+                rightIconButton.frame = CGRect(x: UIScreen.main.bounds.size.width * 0.515, y: UIScreen.main.bounds.size.height * 0.315, width: UIScreen.main.bounds.size.width * 0.38, height: UIScreen.main.bounds.size.width * 0.38)
+                showOverlay(pvp: pvp, components: [leftIconButton, leftWinButton, leftLoseButton, leftScoreLabel, rightIconButton, rightWinButton, rightLoseButton, rightScoreLabel])
+            } else {
+                iconButton.frame = CGRect(x: UIScreen.main.bounds.size.width * 0.2665, y: UIScreen.main.bounds.size.height * 0.31, width: UIScreen.main.bounds.size.width * 0.467, height: UIScreen.main.bounds.size.width * 0.467)
+                showOverlay(pvp: pvp, components: [iconButton, scoreLabel, winButton, loseButton])
+            }
         } else {
             if pvp {
                 showOverlay(pvp: pvp, components: [leftIconButton, leftWinButton, leftLoseButton, leftScoreLabel, rightIconButton, rightWinButton, rightLoseButton, rightScoreLabel])

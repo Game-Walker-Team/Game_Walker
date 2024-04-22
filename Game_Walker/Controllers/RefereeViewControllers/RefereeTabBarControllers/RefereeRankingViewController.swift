@@ -79,8 +79,9 @@ class RefereeRankingPVEViewController: UIViewController {
         leaderBoard.dataSource = self
         leaderBoard.register(RefereeTableViewCell.self, forCellReuseIdentifier: RefereeTableViewCell.identifier)
         leaderBoard.backgroundColor = .white
-        leaderBoard.allowsSelection = false
+        leaderBoard.allowsSelection = true
         leaderBoard.separatorStyle = .none
+        leaderBoard.allowsMultipleSelection = false
     }
     
 }
@@ -92,6 +93,7 @@ extension RefereeRankingPVEViewController: UITableViewDelegate, UITableViewDataS
         let teamNum = String(team.number)
         let points = String(team.points)
         cell.configureRankTableViewCell(imageName: team.iconName, teamNum: "Team \(teamNum)", teamName: team.name, points: points, showScore: self.showScore)
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -105,6 +107,15 @@ extension RefereeRankingPVEViewController: UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return fontSize(size: 85)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.section)
+        let team = teamList[indexPath.row]
+        let svc = GivePointsController(team: team, gameCode: self.gameCode)
+        svc.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+        self.present(svc, animated: true)
+        leaderBoard.deselectRow(at: indexPath, animated: true)
     }
 }
 // MARK: - overlay guide

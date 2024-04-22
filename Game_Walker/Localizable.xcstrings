@@ -722,6 +722,7 @@
       }
     },
     "Please try again when it is ready." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {
@@ -1522,6 +1523,7 @@
       }
     },
     "The Host is completing the settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ko" : {
           "stringUnit" : {

@@ -35,7 +35,7 @@ class RefereeGuideViewController : UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    let colorList = [UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor, UIColor(red: 0.942, green: 0.71, blue: 0.114, alpha: 1).cgColor, UIColor(red: 0.208, green: 0.671, blue: 0.953, alpha: 1).cgColor]
+    let colorList = [UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1).cgColor, UIColor(red: 0.942, green: 0.71, blue: 0.114, alpha: 1).cgColor, UIColor(red: 0.157, green: 0.82, blue: 0.443, alpha: 1).cgColor]
     
     private let overlayView: UIView = {
         let view = UIView()
@@ -48,7 +48,7 @@ class RefereeGuideViewController : UIViewController {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = NSLocalizedString("Remember to choose 'WIN' or 'LOSE' before the round ends!", comment: "")
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .center
         label.font = UIFont(name: "Dosis-Bold", size: fontSize(size: 13))
         return label
@@ -180,7 +180,7 @@ class RefereeGuideViewController : UIViewController {
             
             explanationLabel.widthAnchor.constraint(equalTo: overlayView.widthAnchor, multiplier: 0.8),
             explanationLabel.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.025),
-            explanationLabel.bottomAnchor.constraint(equalTo: teamPointsLabel.topAnchor, constant: -self.view.bounds.height * 0.02),
+            explanationLabel.topAnchor.constraint(equalTo: winButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
             explanationLabel.centerXAnchor.constraint(equalTo: overlayView.centerXAnchor),
 
             winButton.leadingAnchor.constraint(equalTo: overlayView.leadingAnchor, constant: frameList[count + 2].minX),
@@ -306,11 +306,15 @@ class RefereeGuideViewController : UIViewController {
             explanationLbl.numberOfLines = 0
             explanationLbl.textAlignment = .center
             explanationLbl.textColor = .white
-            explanationLbl.font = UIFont(name: "Dosis-Bold", size: fontSize(size: 15))
+            explanationLbl.font = UIFont(name: "Dosis-Bold", size: 15)
             overlayView.addSubview(explanationLbl)
             
             if positionList[i].y >= tabBarTop {
-                explanationLbl.widthAnchor.constraint(equalToConstant: 75).isActive = true
+                if textList[i] == "Timer &\nStart/End Game" || textList[i] == "Timer & \n Station Info" {
+                    explanationLbl.widthAnchor.constraint(equalToConstant: 150).isActive = true
+                } else {
+                    explanationLbl.widthAnchor.constraint(equalToConstant: 90).isActive = true
+                }
             } else {
                 explanationLbl.widthAnchor.constraint(equalToConstant: 200).isActive = true
             }
@@ -395,7 +399,7 @@ class RefereeGuideViewController : UIViewController {
                 
                 explanationLabel.widthAnchor.constraint(equalTo: overlayView.widthAnchor, multiplier: 0.8),
                 explanationLabel.heightAnchor.constraint(equalTo: overlayView.heightAnchor, multiplier: 0.025),
-                explanationLabel.bottomAnchor.constraint(equalTo: leftTeamPointsLabel.topAnchor, constant: -self.view.bounds.height * 0.02),
+                explanationLabel.topAnchor.constraint(equalTo: leftWinButton.bottomAnchor, constant: self.view.bounds.height * 0.04),
                 explanationLabel.centerXAnchor.constraint(equalTo: overlayView.centerXAnchor),
             ])
         }
