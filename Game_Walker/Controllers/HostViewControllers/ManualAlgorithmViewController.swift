@@ -230,6 +230,17 @@ class ManualAlgorithmViewController: UIViewController {
         totalcolumn = max(num_stations, num_teams)
         totalrow = num_rounds
         
+        var tempCellGrid: [[CellData]]? = nil
+        if pvpGameCount > 0 && pveGameCount == 0 {
+            tempCellGrid = checkAndGetPvpDefaultAlgorithm(num_rounds, pvpGameCount, num_teams)
+        }
+
+        // Proceed if tempCellGrid is nil, break out if not nil
+        if let tempGrid = tempCellGrid {
+            cellDataGrid = tempGrid
+            return
+        }
+
         for r in 0..<totalrow {
             var currRow: [Int] = []
             
@@ -1245,7 +1256,7 @@ extension ManualAlgorithmViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension  ManualAlgorithmViewController : ModalViewControllerDelegate {
+extension ManualAlgorithmViewController : ModalViewControllerDelegate {
     func modalViewControllerDidRequestPush() {
         Task { @MainActor in
             do {
@@ -1293,6 +1304,83 @@ extension ManualAlgorithmViewController {
                 return
             }
         }
+    }
+}
+
+extension ManualAlgorithmViewController {
+    private func checkAndGetPvpDefaultAlgorithm(_ rounds: Int, _ stations: Int, _ teams: Int) -> [[CellData]]? {
+        if(rounds != stations || rounds*2 != teams){
+            return nil
+        }
+
+        //MARK: - Standard Setup - works for odd number rounds cases
+        var result = Array(repeating: Array(repeating: 0, count: teams), count: rounds)
+
+        for num in 1...teams {
+            result[0][num-1] = num
+        }
+
+        //odd number diagonal
+        for row in 1..<rounds {
+            for col in stride(from: 0, to: teams, by: 2){
+                result[row][col] = result[row-1][(col-2+teams)%teams]
+            }
+        }
+
+        //even number diagonal
+        for row in 1..<rounds {
+            for col in stride(from: 1, to: teams, by: 2){
+                result[row][col] = result[row-1][(col+2)%teams]
+            }
+        }
+
+        //MARK: - Even rounds & stations
+        if teams%4 == 0 && teams >= 8 {
+            var half = rounds/2
+            if half%2 == 0 {
+                for loop in 0..<half {
+                    for num in 0..<(teams/4) {
+                        if loop%2 == 0{
+                            var temp = result[half+loop][num*4]
+                            result[half+loop][num*4] = result[half+loop][3+num*4]
+                            result[half+loop][3+num*4] = temp
+                        } else {
+                            var temp = result[half+loop][1+num*4]
+                            result[half+loop][1+num*4] = result[half+loop][2+num*4]
+                            result[half+loop][2+num*4] = temp
+                        }
+                    }
+                }
+            } else {
+                for loop in 0..<half-1 {
+                    for num in 0..<(teams/4) {
+                        if loop%2 == 0{
+                            var temp = result[half+loop][num*4]
+                            result[half+loop][num*4] = result[half+loop][3+num*4]
+                            result[half+loop][3+num*4] = temp
+                        } else {
+                            var temp = result[half+loop][1+num*4]
+                            result[half+loop][1+num*4] = result[half+loop][2+num*4]
+                            result[half+loop][2+num*4] = temp
+                        }
+                    }
+                }
+            }
+        }
+        guard !result.isEmpty, !result[0].isEmpty else {
+            return nil
+        }
+        // Convert result to CellData format
+        var cellDataGrid = [[CellData]]()
+        for (rowIndex, row) in result.enumerated() {
+            var rowData = [CellData]()
+            for (columnIndex, num) in row.enumerated() {
+                let cellData = CellData(number: num, visible: true, index: IntPair(first: rowIndex, second: columnIndex))
+                rowData.append(cellData)
+            }
+            cellDataGrid.append(rowData)
+        }
+        return cellDataGrid
     }
 }
 
@@ -1548,67 +1636,3 @@ class StationTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-//
-//func pvpDefault(_ rounds: Int, _ stations: Int, _ teams: Int) -> [[Int]]? {
-//    if(rounds != stations || rounds*2 != teams){
-//        return nil
-//    }
-//    
-//    //MARK: - Standard Setup - works for odd number rounds cases
-//    var result = Array(repeating: Array(repeating: 0, count: teams), count: rounds)
-//    
-//    for num in 1...teams {
-//        result[0][num-1] = num
-//    }
-//    
-//    //odd number diagonal
-//    for row in 1..<rounds {
-//        for col in stride(from: 0, to: teams, by: 2){
-//            result[row][col] = result[row-1][(col-2+teams)%teams]
-//        }
-//    }
-//    
-//    //even number diagonal
-//    for row in 1..<rounds {
-//        for col in stride(from: 1, to: teams, by: 2){
-//            result[row][col] = result[row-1][(col+2)%teams]
-//        }
-//    }
-//    
-//    //MARK: - Even rounds & stations
-//    if teams%4 == 0 && teams >= 8 {
-//        var half = rounds/2
-//        if half%2 == 0 {
-//            for loop in 0..<half {
-//                for num in 0..<(teams/4) {
-//                    if loop%2 == 0{
-//                        var temp = result[half+loop][num*4]
-//                        result[half+loop][num*4] = result[half+loop][3+num*4]
-//                        result[half+loop][3+num*4] = temp
-//                    } else {
-//                        var temp = result[half+loop][1+num*4]
-//                        result[half+loop][1+num*4] = result[half+loop][2+num*4]
-//                        result[half+loop][2+num*4] = temp
-//                    }
-//                }
-//            }
-//        } else {
-//            for loop in 0..<half-1 {
-//                for num in 0..<(teams/4) {
-//                    if loop%2 == 0{
-//                        var temp = result[half+loop][num*4]
-//                        result[half+loop][num*4] = result[half+loop][3+num*4]
-//                        result[half+loop][3+num*4] = temp
-//                    } else {
-//                        var temp = result[half+loop][1+num*4]
-//                        result[half+loop][1+num*4] = result[half+loop][2+num*4]
-//                        result[half+loop][2+num*4] = temp
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    return result
-//}
